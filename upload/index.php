@@ -25,14 +25,21 @@ if($thisclient && is_object($thisclient) && $thisclient->isValid()) {
 require(CLIENTINC_DIR.'header.inc.php');
 ?>
 <div id="index">
-<h1>Welcome to the support center</h1>
-<p class="big">In order to streamline support requests and better serve you, we utilize a support ticket system. Every support request is assigned a unique ticket number which you can use to track the progress and responses online. For your reference we provide complete archives and history of all your support requests. A valid email address is required.</p>
+<h1>Centro di supporto Evoluzioni Tecnologiche</h1>
+<p class="big">
+Al fine di velocizzare e offrire un controllo migliore sullo stato del servizio vi ricordiamo che ad ogni RICHIESTA di assistenza
+viene assegnato un numero di riferimento, utilizzabile per seguire lo stato dell'assistenza online.<br>
+
+I ticket non vengono mai cancellati, eventuali ticket errati se possibile son da segnalare per la chiusura con apposito ticket<br>
+
+Un indirizzo email valido è richiesto per il corretto uso</p>
 <hr />
 <br />
 <div class="lcol">
   <img src="./images/new_ticket_icon.jpg" width="48" height="48" align="left" style="padding-bottom:150px;">
-  <h3>Open A New Ticket</h3>
-  Please provide as much detail as possible so we can best assist you. To update a previously submitted ticket, please use the form to the right.
+  <h3>Apri un nuovo Ticket</h3>
+  Per favore scegli un template e compilalo più possibile.<br>
+  Se devi aggiornare un ticket gia esistente usa il form a destra.
   <br /><br />
   <form method="link" action="open.php">
   <input type="submit" class="button2" value="Open New Ticket">
@@ -40,7 +47,7 @@ require(CLIENTINC_DIR.'header.inc.php');
 </div>
 <div class="rcol">
   <img src="./images/ticket_status_icon.jpg" width="48" height="48" align="left" style="padding-bottom:150px;">
-  <h3>Check Ticket Status</h3>We provide archives and history of all your support requests complete with responses.
+  <h3>Stato dei Ticket</h3>Viene fornito l'archivio completo.
   <br /><br />
   <form class="status_form" action="login.php" method="post">
     <fieldset>

@@ -59,7 +59,7 @@ th {
 
   #header {
     padding:0 10px 0 0;
-    height:64px;
+    height:90px;
     border-bottom:1px solid;
     overflow:none;
   }
@@ -218,7 +218,9 @@ th {
    
   #powered_by {
       clear:both;
-      display:block;
+      /*
+display:block;
+*/
       width:126px;
       height:23px;
   }
