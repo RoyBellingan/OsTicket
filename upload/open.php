@@ -1,4 +1,4 @@
-<?php
+ <?php
 /*********************************************************************
     open.php
 
@@ -28,7 +28,7 @@ if($_POST):
     }
     //Ticket::create...checks for errors..
     if(($ticket=Ticket::create($_POST,$errors,SOURCE))){
-        $msg='Support ticket request created';
+        $msg="Ticket numero $ticket->id creato";
         if($thisclient && $thisclient->isValid()) //Logged in...simply view the newly created ticket.
             @header('Location: tickets.php?id='.$ticket->getExtId());
         //Thank the user and promise speedy resolution!

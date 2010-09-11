@@ -15,18 +15,16 @@ if(!defined('OSTCLIENTINC') || !is_object($ticket)) die('Kwaheri rafiki!'); //Sa
 <div style="margin:5px 100px 100px 0;">
     <?=Format::htmlchars($ticket->getName())?>,<br>
     <p>
-     Thank you for contacting us.<br>
-     A support ticket request has been created and a representative will be getting back to you shortly if necessary.</p>
+     Il ticket è stato creato, verrà ricontattato se necessario al più presto</p>
           
     <?if($cfg->autoRespONNewTicket()){ ?>
-    <p>An email with the ticket number has been sent to <b><?=$ticket->getEmail()?></b>.
-        You'll need the ticket number along with your email to view status and progress online. 
+    <p>Ti è anche stata inviata un email a <b><?=$ticket->getEmail()?></b> con i dati appena inseriti
     </p>
     <p>
-     If you wish to send additional comments or information regarding same issue, please follow the instructions on the email.
+     Per aggiungere o modificare informazioni segui le istruzioni nella mail.
     </p>
     <?}?>
-    <p>Support Team </p>
+    <p>Evoluzioni Tecnologiche Support Team </p>
 </div>
 <?
 unset($_POST); //clear to avoid re-posting on back button??

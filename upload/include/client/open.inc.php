@@ -12,11 +12,11 @@ $info=($_POST && $errors)?Format::input($_POST):array(); //on error...use the po
         <p id="warnmessage"><?=$warn?></p>
     <?}?>
 </div>
-<div>Please fill in the form below to open a new ticket.</div><br>
+<div>Perfavore compila i campi sottostanti</div><br>
 <form action="open.php" method="POST" enctype="multipart/form-data">
 <table align="left" cellpadding=2 cellspacing=1 width="90%">
     <tr>
-        <th width="20%">Full Name:</th>
+        <th width="20%">Committente:</th>
         <td>
             <?if ($thisclient && ($name=$thisclient->getName())) {
                 ?>
@@ -28,7 +28,7 @@ $info=($_POST && $errors)?Format::input($_POST):array(); //on error...use the po
         </td>
     </tr>
     <tr>
-        <th nowrap >Email Address:</th>
+        <th nowrap >Indirizzo Email:</th>
         <td>
             <?if ($thisclient && ($email=$thisclient->getEmail())) {
                 ?>
@@ -40,14 +40,14 @@ $info=($_POST && $errors)?Format::input($_POST):array(); //on error...use the po
         </td>
     </tr>
     <tr>
-        <td>Telephone:</td>
+        <td>Telefono:</td>
         <td><input type="text" name="phone" size="25" value="<?=$info['phone']?>">
              &nbsp;Ext&nbsp;<input type="text" name="phone_ext" size="6" value="<?=$info['phone_ext']?>">
             &nbsp;<font class="error">&nbsp;<?=$errors['phone']?></font></td>
     </tr>
     <tr height=2px><td align="left" colspan=2 >&nbsp;</td</tr>
     <tr>
-        <th>Help Topic:</th>
+        <th>Riguardo a:</th>
         <td>
             <select name="topicId">
                 <option value="" selected >Select One</option>
@@ -67,14 +67,14 @@ $info=($_POST && $errors)?Format::input($_POST):array(); //on error...use the po
         </td>
     </tr>
     <tr>
-        <th>Subject:</th>
+        <th>Soggetto:</th>
         <td>
             <input type="text" name="subject" size="35" value="<?=$info['subject']?>">
             &nbsp;<font class="error">*&nbsp;<?=$errors['subject']?></font>
         </td>
     </tr>
     <tr>
-        <th valign="top">Message:</th>
+        <th valign="top">Messaggio:</th>
         <td>
             <? if($errors['message']) {?> <font class="error"><b>&nbsp;<?=$errors['message']?></b></font><br/><?}?>
             <textarea name="message" cols="35" rows="8" wrap="soft" style="width:85%"><?=$info['message']?></textarea></td>
@@ -84,7 +84,7 @@ $info=($_POST && $errors)?Format::input($_POST):array(); //on error...use the po
       $sql='SELECT priority_id,priority_desc FROM '.TICKET_PRIORITY_TABLE.' WHERE ispublic=1 ORDER BY priority_urgency DESC';
       if(($priorities=db_query($sql)) && db_num_rows($priorities)){ ?>
       <tr>
-        <td>Priority:</td>
+        <td>Priorità:</td>
         <td>
             <select name="pri">
               <?
@@ -103,7 +103,7 @@ $info=($_POST && $errors)?Format::input($_POST):array(); //on error...use the po
         
         ?>
     <tr>
-        <td>Attachment:</td>
+        <td>Allegato:</td>
         <td>
             <input type="file" name="attachment"><font class="error">&nbsp;<?=$errors['attachment']?></font>
         </td>
@@ -125,9 +125,9 @@ $info=($_POST && $errors)?Format::input($_POST):array(); //on error...use the po
     <tr>
         <td></td>
         <td>
-            <input class="button" type="submit" name="submit_x" value="Submit Ticket">
-            <input class="button" type="reset" value="Reset">
-            <input class="button" type="button" name="cancel" value="Cancel" onClick='window.location.href="index.php"'>    
+            <input class="button" type="submit" name="submit_x" value="Invia Ticket">
+            <input class="button" type="reset" value="Reset del form">
+            <input class="button" type="button" name="cancel" value="Cancella form" onClick='window.location.href="index.php"'>    
         </td>
     </tr>
 </table>

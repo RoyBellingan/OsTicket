@@ -13,7 +13,7 @@ header("Content-Type: text/html; charset=UTF-8\r\n");
 <body>
 <div id="container">
     <div id="header">
-        <a id="logo" href="index.php" title="Evoluzioni Tecnologiche Support Center"><img src="http://www.evoluzionitecnologiche.com/images-techstore/evoluzionitecnologiche-logo.jpg" border=0 alt="Evoluzioni Tecnologiche Support Center"></a>
+        <a id="logo" href="index.php" title="Evoluzioni Tecnologiche Support Center"><img src="./images/evologo.jpg" border=0 alt="Evoluzioni Tecnologiche Support Center"></a>
         <p><span>SUPPORT TICKET</span> SYSTEM</p>
     </div>
     <ul id="nav">

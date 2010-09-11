@@ -45,9 +45,29 @@ Un indirizzo email valido è richiesto per il corretto uso</p>
   <input type="submit" class="button2" value="Open New Ticket">
   </form>
 </div>
+<div class="clear"></div>
+<div class="lcol">
+  <img src="./images/ticket_status_icon.jpg" width="48" height="48" align="left" style="padding-bottom:150px;">
+  <h3>Stato dei Ticket esercenti</h3>Stato completo dei ticket 
+  <br /><br />
+  <form class="status_form" action="login.php" method="post">
+    <fieldset>
+      <label>Email:</label>
+      <input type="text" name="lemail">
+    </fieldset>
+    <fieldset>
+     <label>Ticket#:</label>
+     <input type="text" name="lticket">
+    </fieldset>
+    <fieldset>
+        <label>&nbsp;</label>
+         <input type="submit" class="button2" value="Check Status">
+    </fieldset>
+  </form>
+</div>
 <div class="rcol">
   <img src="./images/ticket_status_icon.jpg" width="48" height="48" align="left" style="padding-bottom:150px;">
-  <h3>Stato dei Ticket</h3>Viene fornito l'archivio completo.
+  <h3>Stato dei Ticket privati</h3>Stato dei singoli ticket
   <br /><br />
   <form class="status_form" action="login.php" method="post">
     <fieldset>
