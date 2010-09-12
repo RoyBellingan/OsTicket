@@ -1,4 +1,4 @@
-Thank you for trying osTicket V1.6 ST (Feb 09,2010).
+Thank you for trying MosTicket V1.6 ST (Feb 09,2010).
 
 Version
  osTicket v1.6 ST (stable)
